@@ -1,6 +1,6 @@
-create database coffee_shop_sales_db;
-select *from coffee_shop_sales;
-desc coffee_shop_sales;
+CREATE database IF NOT EXISTS  coffee_shop_sales_db;
+SELECT *FROM coffee_shop_sales;
+DESC coffee_shop_sales;
 
 ---------------------------------------------------------DATA_CLEANING--------------------------------------------------------------------------------------
 
