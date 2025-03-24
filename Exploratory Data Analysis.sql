@@ -1,6 +1,7 @@
-SELECT *FROM coffee_shop_sales;
+---------------------------------------------------------COFFEE_SHOP_SALES_ANALYSIS--------------------------------------------------------------------------
 
--- TOTAL SALES ANALYSIS--------------------------------------------------------------
+
+-- TOTAL SALES ANALYSIS-------------------------------------------------------------------------
 
 -- Total sales for each respective month
 SELECT MONTH(transaction_date) AS Month, ROUND(SUM(unit_price * transaction_qty)) AS Total_Sales
