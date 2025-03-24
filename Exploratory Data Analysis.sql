@@ -111,6 +111,7 @@ WHERE MONTH(transaction_date) IN (4,5)
 GROUP BY MONTH(transaction_date)
 ORDER BY MONTH(transaction_date);
 
+
 c)List of all Month on Month (MoM) decrease or increase in qty sold?
 SELECT MONTH(transaction_date) AS Month, -- Month number
 SUM(transaction_qty) AS Total_Quantity_Sold, -- Total Quantity Sold Column
