@@ -1,3 +1,4 @@
-![Background Image](https://github.com/user-attachments/assets/b1af7dd7-ec3b-4b51-a8bc-4f34a99597d3)
+![coffee-shop-logos-design-template-cda8575e146cc5ba17cd3c1a24d65ba1_screen](https://github.com/user-attachments/assets/b1bf6800-739b-40e6-bdf7-18806123e09a)
+
 
 
