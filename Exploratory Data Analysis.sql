@@ -27,8 +27,9 @@ FROM coffee_shop_sales
 WHERE MONTH(transaction_date) IN (4,5)
 GROUP BY MONTH(transaction_date)
 ORDER BY MONTH(transaction_date);
-
-# OR by applying CTE--------------------------------------------------------------------------------
+------------------------------------------
+# OR by applying CTE
+------------------------------------------    
 WITH MonthlySales AS (
     SELECT 
         MONTH(transaction_date) AS Month,
