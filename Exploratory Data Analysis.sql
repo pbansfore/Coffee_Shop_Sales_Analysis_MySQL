@@ -36,15 +36,9 @@ CHANGE COLUMN ï»¿transaction_id transaction_id INT;
 
 1)TOTAL SALES ANALYSIS-------------------------------------------------------------------------
 
-a)Total sales for each respective month?
-SELECT MONTH(transaction_date) AS Month, ROUND(SUM(unit_price * transaction_qty)) AS Total_Sales
-FROM coffee_shop_sales
-GROUP BY 
-MONTH(transaction_date);
-----------------------
-# OR
-----------------------    
-SELECT MONTH(transaction_date), CONCAT((ROUND(SUM(unit_price * transaction_qty)/1000,1),"K") AS Total_Sales
+a)Total sales for each respective month?    
+SELECT MONTH(transaction_date) AS Month,
+CONCAT(ROUND(SUM(unit_price * transaction_qty)/1000,1),"K") AS Total_Sales
 FROM coffee_shop_sales
 GROUP BY
 MONTH(transaction_date);
