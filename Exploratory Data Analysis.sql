@@ -8,8 +8,9 @@ SELECT MONTH(transaction_date) AS Month, ROUND(SUM(unit_price * transaction_qty)
 FROM coffee_shop_sales
 GROUP BY 
 MONTH(transaction_date);
-
+----------------------
 # OR
+----------------------    
 SELECT MONTH(transaction_date), CONCAT((ROUND(SUM(unit_price * transaction_qty)))/1000,"K") AS Total_Sales
 FROM coffee_shop_sales
 GROUP BY
