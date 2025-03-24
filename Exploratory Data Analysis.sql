@@ -91,7 +91,7 @@ ORDER BY MONTH(transaction_date);
 
 
 
--- TOTAL QUANTITY SOLD ANALYSIS------------------------------------------
+3)TOTAL QUANTITY SOLD ANALYSIS--------------------------------------------------------------------
 
 a)Total quantity sold for each respective month?
 SELECT MONTH(transaction_date) AS Month, SUM(transaction_qty) AS Total_Quantity_Sold
