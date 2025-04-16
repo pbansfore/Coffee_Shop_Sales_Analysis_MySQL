@@ -177,14 +177,14 @@ CASE
 END AS day_type,
 CONCAT(ROUND(SUM(unit_price*transaction_qty)/1000,1),"K") AS Total_Sales
 FROM coffee_shop_sales
-WHERE Month(transaction_date)=2 -- Feb Month 
+WHERE Month(transaction_date)=5 -- May Month 
 GROUP BY 
 CASE 
     WHEN DAYOFWEEK(transaction_date) IN (1,7) THEN 'Weekends'
     ELSE 'Weekdays'
     END;
 
-# NOW------------------------
+# NOW OVERALL------------------------
 SELECT MONTH(transaction_date) AS Month_num,MONTHNAME(transaction_date) AS Month,
     CONCAT(ROUND(SUM(CASE WHEN DAYOFWEEK(transaction_date) IN (1,7) THEN unit_price * transaction_qty ELSE 0 END)/1000,1),"K") AS Weekend_Sales,
     CONCAT(ROUND(SUM(CASE WHEN DAYOFWEEK(transaction_date) BETWEEN 2 AND 6 THEN unit_price * transaction_qty ELSE 0 END)/1000,1),"K") AS Weekday_Sales
@@ -199,10 +199,17 @@ ORDER BY MONTH(transaction_date);
 SELECT store_location,
 CONCAT(ROUND(SUM(unit_price*transaction_qty)/1000,1),"K") AS Total_Sales
 FROM coffee_shop_sales
-WHERE Month(transaction_date)=6 -- June month
+WHERE Month(transaction_date)=5 -- May month
 GROUP BY store_location
 ORDER BY SUM(unit_price*transaction_qty) DESC; -- always condition by the original not the Aliases
 -- we are not sorting through ALIAS Total_Sales becoz Total_Sales is a concatenated string, MySQL sorts it alphabetically, not numerically
+
+#NOW OVERALL-------------------  
+SELECT store_location,
+CONCAT(ROUND(SUM(unit_price*transaction_qty)/1000,1),"K") AS Total_Sales
+FROM coffee_shop_sales
+GROUP BY store_location
+ORDER BY SUM(unit_price*transaction_qty) DESC;
 
 
 
@@ -253,6 +260,13 @@ ORDER BY DAY(transaction_date)) AS Daily_Sales;
  WHERE MONTH(transaction_date)=5 -- May month
  GROUP BY product_category
  ORDER BY SUM(unit_price*transaction_qty) DESC;
+
+#NOW OVERALL----------------------
+SELECT product_category,
+CONCAT(ROUND(SUM(unit_price*transaction_qty)/1000,1),"K") AS Sales
+FROM coffee_shop_sales
+GROUP BY product_category
+ORDER BY SUM(unit_price*transaction_qty) DESC;
 
 
 
@@ -322,6 +336,13 @@ WHERE MONTH(transaction_date)=5 -- May month
 GROUP BY HOUR(transaction_time)
 ORDER BY HOUR(transaction_time);
 
+#NOW OVERALL--------------------
+SELECT HOUR(transaction_time) AS Hours,
+CONCAT(ROUND(SUM(unit_price*transaction_qty)/1000,1),"K") AS Sales
+FROM coffee_shop_sales
+GROUP BY HOUR(transaction_time)
+ORDER BY HOUR(transaction_time);
+
 
 
 17)DETERMINING PEAK DAYS OF SALES IN A PARTICULAR MONTH---------------------------------------------------------------------
@@ -339,6 +360,22 @@ CONCAT(ROUND(SUM(unit_price*transaction_qty)/1000,1),"K") AS Sales
 FROM coffee_shop_sales
 WHERE MONTH(transaction_date)=5 -- May month
 GROUP BY 1;
+
+#NOW OVERALL----------------------
+SELECT
+CASE
+    WHEN DAYOFWEEK(transaction_date)=2 THEN 'Monday'
+    WHEN DAYOFWEEK(transaction_date)=3 THEN 'Tueday'
+    WHEN DAYOFWEEK(transaction_date)=4 THEN 'Wednesday'
+    WHEN DAYOFWEEK(transaction_date)=5 THEN 'Thursday'
+    WHEN DAYOFWEEK(transaction_date)=6 THEN 'Friday'
+    WHEN DAYOFWEEK(transaction_date)=7 THEN 'Saturday'
+    ELSE 'Sunday'
+END AS Day_of_Week,
+CONCAT(ROUND(SUM(unit_price*transaction_qty)/1000,1),"K") AS Sales
+FROM coffee_shop_sales
+GROUP BY 1;
+
 
 
 
