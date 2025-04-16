@@ -4,7 +4,8 @@ Developed a **MySQL**-based project focused on analyzing sales data for a coffee
 
 # Problem Statement
 
-The coffee shop is struggling to understand its sales performance.
+The coffee shop is facing challenges in understanding its sales performance due to the absence of structured data analysis. This makes it difficult to uncover sales trends, evaluate product performance, and make data-driven business decisions.
+
 
 # Analysis
 
