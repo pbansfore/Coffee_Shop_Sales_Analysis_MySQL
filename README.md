@@ -1,3 +1,5 @@
+# ☕ Coffee Shop Sales Analysis (MySQL)
+
 ## 📊 Project Overview
 
 Developed a **MySQL**-based project focused on analyzing sales data for a coffee shop. The project involved writing and optimizing SQL queries to extract actionable insights into various aspects of sales performance, including total sales, order analysis, sales trends over time and by location, and product-level performance.
