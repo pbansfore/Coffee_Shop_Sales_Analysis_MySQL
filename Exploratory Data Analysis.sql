@@ -3,7 +3,8 @@
 CREATE DATABASE IF NOT EXISTS  coffee_shop_sales_db;
 USE coffee_shop_sales_db;
 
---Imported CSV File Data by Table Data Import Wizard feature with table name "coffee_shop_sales"-------------------
+--Imported CSV File Data by Table Data Import Wizard feature with table name "coffee_shop_sales"
+
 SELECT *FROM coffee_shop_sales;
 DESC coffee_shop_sales;
 
