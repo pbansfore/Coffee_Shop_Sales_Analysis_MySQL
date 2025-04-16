@@ -1,13 +1,13 @@
-# Project Overview
+## 📊 Project Overview
 
 Developed a **MySQL**-based project focused on analyzing sales data for a coffee shop. The project involved writing and optimizing SQL queries to extract actionable insights into various aspects of sales performance, including total sales, order analysis, sales trends over time and by location, and product-level performance.
 
-# Problem Statement
+## ❓ Problem Statement
 
 The coffee shop is facing challenges in understanding its sales performance due to the absence of structured data analysis. This makes it difficult to uncover sales trends, evaluate product performance, and make data-driven business decisions.
 
 
-# Analysis
+## ✅ Objectives
 
 * Total Sales Analysis
 * Total Order Analysis
@@ -18,6 +18,43 @@ The coffee shop is facing challenges in understanding its sales performance due 
 * Sales Analysis by Product Category
 * Top 10 Products by Sales
 * Sales Analysis by Months, Days, and Hours
+* Sales Analysis on Weekdays vs Weekends
+
+## Key Insights
+
+### 💰 Total Sales Overview
+* **Total Revenue:** $698K  
+* **Total Orders:** 149K  
+
+### 📅 Sales by Month and Location
+* **Highest Month:** June ($166K), likely due to increased summer foot traffic  
+* **Lowest Month:** February ($76K)   
+* **Top Location:** Hell's Kitchen with $236K  
+* **Performance across all three locations** has been generally consistent
+### 📅 Total Sales on Weekdays and Weekends
+* **Weekdays:** $503K
+* **Weekends:** $195K
+
+### 🏆 Top Products by Sales
+* **Barista Espresso:** $91K  
+* **Brewed Chai Tea:** $77K  
+* **Hot Chocolate:** $72K  
+* **Gourmet brewed Coffee:** $70K
+
+### Popular Product Categories
+* **Coffee:** $270K  
+* **Tea:** $196K  
+* **Bakery:** $82K  
+### Least Performing Categories: 
+* **Branded:** $13K  
+* **Loose Tea:** $11K  
+* **Flavours:** $8K  
+* **Packaged Chocolate:** $4K
+
+### ⏰ Peak Sales Time
+* **Peak Hours:** 7 AM to 10 AM   
+* **Peak Days:** Weekdays (Monday to Friday) attract slightly more customers compared to weekends (Saturday and Sunday)
+  
 
 # Conclusions & Recommendations
 
